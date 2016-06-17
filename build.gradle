@@ -31,6 +31,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-hateoas')
 	compile("c3p0:c3p0:0.9.1.2")
 	runtime('mysql:mysql-connector-java')
+	testCompile("com.jayway.jsonpath:json-path")
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
