@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cyanca.model.Customer;
+import com.cyanca.model.CustomerResource;
 
 
 @RestController
@@ -16,10 +16,10 @@ import com.cyanca.model.Customer;
 public class CustomerController {
 
 	@RequestMapping(method = RequestMethod.GET)
-    public Customer show(@PathVariable String customerId) {
+    public CustomerResource add(@PathVariable long customerId) {
 
-		Customer customer = new Customer("Andrew", "Chung");
-		customer.add(linkTo(methodOn(CustomerController.class).show(customerId)).withSelfRel());
+		CustomerResource customer = new CustomerResource("Andrew", "Chung");
+		customer.add(linkTo(methodOn(CustomerController.class).add(customerId)).withSelfRel());
 
         return customer;
     }
