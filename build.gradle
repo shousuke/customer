@@ -42,7 +42,7 @@ flyway {
     url = 'jdbc:mysql://localhost:3306?useUnicode=true&characterEncoding=UTF8'
     user = 'cyanca'
     password = '5319384253'
-    schemas = ['customer']
+    schemas = ['customer', 'customer_test']
 }
 
 eclipse {
